@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  border: none;
+  outline: none;
+  font-family: "Roboto";
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #29282d;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+}
+
+.Canvas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  --blockHeight: var(--height);
+}
+
+.left {
+  background: #333335;
+  width: 8.5vw;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: var(--blockHeight);
+  /*show the submenu when input is checked*/
+}
+.left .title {
+  font-size: 2em;
+  color: #919193;
+}
+.left .panel {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  padding-top: 20px;
+  gap: 20px;
+  /*show the submenu when input is checked*/
+}
+.left .panel .Home {
+  background: #333335;
+  font-size: larger;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.left .panel .List1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left .panel .List1 input,
+.left .panel .List1 ul.submenu,
+.left .panel .List1 ul.submenu2 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.left .panel .List1 label {
+  font-size: large;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left .panel .List1 label .img {
+  width: 15px;
+}
+.left .panel #check01:checked ~ ul.submenu {
+  display: flex;
+  opacity: 1;
+}
+.left #check02:checked ~ ul.submenu2 {
+  display: flex;
+  opacity: 1;
+}
+.left .DropMen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.left label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.left .Links {
+  background-color: #333335;
+  display: flex;
+  justify-content: flex-start;
+  font-size: large;
+}
+.left .submenu,
+.left .submenu2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: large;
+}
+
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.right .poisk {
+  padding-top: 20px;
+  padding-right: 40px;
+  padding: 20px 40px 15px 40px;
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  background: #29282d;
+  z-index: 3;
+}
+.right .poisk .poiskovikz_1 {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 0px #919193;
+}
+.right .poisk .poiskovikz_1 .poiskovikz {
+  font-size: medium;
+  background: transparent;
+}
+.right .slider {
+  width: 100%;
+  height: 45.37vh;
+  position: relative;
+  overflow: hidden;
+}
+.right .slider .slide {
+  width: 100%;
+  height: 45.37vh;
+  position: absolute;
+  transition: all 0.5s;
+}
+.right .slider .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.right .slider .btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  opacity: 0;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+.right .slider .btn:active {
+  transform: scale(1.1);
+}
+.right .slider .btn-prev {
+  top: 45%;
+  left: 2%;
+}
+.right .slider .btn-next {
+  top: 45%;
+  right: 2%;
+}
+.right #dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.right #dots #dotss {
+  width: 5vw;
+}
+.right .cats #active {
+  color: #e17376;
+}
+.right .page-scroller {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+}
+.right .page-scroller .page {
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #fdab30, #751899);
+}
+.right .cats,
+.right .content,
+.right .page-scroller {
+  margin: 20px 50px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 10px;
+  gap: 10px;
+}
+.item .i-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.item .i-top .buy {
+  padding: 2px 15px;
+  background: linear-gradient(to right, #fdab30, #751899);
+  border-radius: 20px;
+}
+.item .i-mid {
+  width: 225px;
+  height: 153px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.item .i-mid .mona {
+  position: absolute;
+  z-index: 1;
+}
+.item .i-mid .likebox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 0;
+  height: 0;
+}
+.item .i-mid .likebox-grande {
+  padding: 5px;
+  z-index: 2;
+}
+.item .i-mid .likebox-grande:hover {
+  cursor: pointer;
+}
+.item .i-bot {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.item .i-bot .i-name {
+  font-size: 1em;
+  font-weight: 500;
+}
+.item .i-bot .i-price {
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #fdab30;
+}/*# sourceMappingURL=style.css.map */

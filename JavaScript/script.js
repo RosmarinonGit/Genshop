@@ -69,11 +69,11 @@ checkboxes.forEach(checkboxes => {
   checkboxes.addEventListener('click', () => {
     
     if(checkboxes.checked) {
-        image.src = './img/liked.svg'; 
+        image.src = './img/Liked.svg'; 
       }
       // If unchecked, change back
       else {
-        image.src = './img/unliked.svg';
+        image.src = './img/Unliked.svg';
       }
   });
 
